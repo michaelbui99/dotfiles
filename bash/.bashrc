@@ -1,15 +1,9 @@
+ARCH=$(uname)
+
 # Aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
-
-# Environment
-#PATH="/usr/local/bin:$PATH"
-#export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-#export PATH=$PATH:$HOME/.cargo/bin
-#export PATH="$PATH:$HOME/.dotnet/tools"
-#export PATH=$PATH:$(go env GOPATH)/bin
-#export PATH="$PATH:$HOME/.local/bin"
 
 
 # git auto-complete
@@ -19,8 +13,10 @@ fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  if [[ "$ARCH" = "Darwin"]]; then 
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  fi
 
 # GPG
 export GPG_TTY=$(tty)
@@ -37,10 +33,16 @@ if [ -f '/Users/mibui/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/User
 if [ -f '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 # Start up 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$ARCH" = "Darwin "]]; then 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 # iterm2 shell integration. SHOULD BE LOADED LAST!
-source ~/.iterm2_shell_integration.bash
+
+if [[ "$ARCH" = "Darwin"]]; then 
+    source ~/.iterm2_shell_integration.bash
+fi
 
