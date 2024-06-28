@@ -13,6 +13,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Start up 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
 
 # git auto-complete
 if [ -f ~/.git-completion.bash ]; then
