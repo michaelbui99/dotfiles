@@ -4,5 +4,5 @@ New-Item -ItemType SymbolicLink -Force -Path $windowsTerminalSettingsPath -Targe
 New-Item -ItemType SymbolicLink -Force -Path $PROFILE -Target $env:USERPROFILE\dotfiles\powershell\Profile.ps1;
 New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.vimrc -Target $env:USERPROFILE\vim\.vimrc
 New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.ideavimrc -Target $env:USERPROFILE\vim\.ideavimrc
-New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.config/starship.toml -Target $env:USERPROFILE\starship\.starship.toml
+New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.config/starship.toml -Target $env:USERPROFILE\starship\starship.toml
 
