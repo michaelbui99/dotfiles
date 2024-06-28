@@ -15,6 +15,8 @@ Import-Module posh-git
 
 # fzf
 Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
+$env:FZF_DEFAULT_OPTS = '--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
+
 
 # Alias
 Set-Alias vim nvim
