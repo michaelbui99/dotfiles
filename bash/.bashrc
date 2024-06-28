@@ -40,9 +40,9 @@ fi
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
-# iterm2 shell integration. SHOULD BE LOADED LAST!
 
 if [[ "$ARCH" = "Darwin" ]]; then 
+    # iterm2 shell integration. SHOULD BE LOADED LAST!
     source ~/.iterm2_shell_integration.bash
 fi
 
