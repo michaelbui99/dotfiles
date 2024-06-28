@@ -26,12 +26,18 @@ function mac() {
 function ubuntu(){
     sudo add-apt-repository ppa:neovim-ppa/unstable
 
-    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim"
+    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim terraform jq yq gradle"
 
+    # Install tools
     sudo apt update 
     sudo apt upgrade -y 
     sudo apt install -y ${PACKAGES}
+    ## Starship
     curl -sS https://starship.rs/install.sh | sh
+    ## Zoxide
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh 
+    ## NVM
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
     # Setup ssh key
     SKIP_SSH_KEYGEN=false
