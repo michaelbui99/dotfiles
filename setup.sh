@@ -23,6 +23,29 @@ function mac() {
     #chsh -s /opt/homebrew/bin/bash
 }
 
+function ubuntu(){
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+
+    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim"
+
+    sudo apt update 
+    sudo apt upgrade -y 
+    sudo apt install -y ${PACKAGES}
+    curl -sS https://starship.rs/install.sh | sh
+
+    # Setup ssh key
+    SKIP_SSH_KEYGEN=false
+    if [[ -f ~/.ssh/id_rsa ]];then
+            echo "Detected existing ssh keys."
+            echo "Skipping ssh-keygen."
+            $SKIP_SSH_KEYGEN=true
+    fi
+
+    if [[ $SKIP_SSH_KEYGEN == false ]]; then
+            ssh-keygen -b 4096 -N "" -f ~/.ssh/id_rsa
+    fi
+}
+
 ARCH=$(uname)
 
 if [[ "$ARCH" = "Darwin" ]]; then
@@ -30,8 +53,8 @@ if [[ "$ARCH" = "Darwin" ]]; then
 fi
 
 if [[ "$ARCH" = "Linux" ]]; then
- # TODO: Find distro and use appropriate package manager
- echo "Not implemented yet"
+    # TODO: Find distro and use appropriate package manager. For now just assume ubuntu 
+    ubuntu
 fi
 
 
