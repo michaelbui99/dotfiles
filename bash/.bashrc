@@ -13,7 +13,7 @@ fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-  if [[ "$ARCH" = "Darwin"]]; then 
+  if [[ "$ARCH" = "Darwin" ]]; then 
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
   fi
@@ -33,7 +33,7 @@ if [ -f '/Users/mibui/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/User
 if [ -f '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 # Start up 
-if [[ "$ARCH" = "Darwin "]]; then 
+if [[ "$ARCH" = "Darwin" ]]; then 
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
@@ -42,7 +42,7 @@ eval "$(zoxide init bash)"
 
 # iterm2 shell integration. SHOULD BE LOADED LAST!
 
-if [[ "$ARCH" = "Darwin"]]; then 
+if [[ "$ARCH" = "Darwin" ]]; then 
     source ~/.iterm2_shell_integration.bash
 fi
 
