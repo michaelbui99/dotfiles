@@ -3,7 +3,7 @@
 WORKDIR="$(pwd)"
 
 function mac() {
-    FORMULAE=("bash" "cmake" "curl" "docker-compose" "git" "gradle" "openjdk@21" "helm" "yq" "jq" "nvm" "poetry" "terraform" "wget" "starship" "zoxide" "ripgrep" )
+    FORMULAE=("bash" "cmake" "curl" "docker-compose" "git" "gradle" "openjdk@21" "helm" "yq" "jq" "nvm" "poetry" "terraform" "wget" "starship" "zoxide" "ripgrep" "nvim")
     CASKS=("iterm2" "powershell")
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
