@@ -7,13 +7,8 @@ fi
 PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH="$PATH:/Users/mibui/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH=$PATH:$(go env GOPATH)/bin
-
-# Start up 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
 
 
 # git auto-complete
@@ -32,21 +27,6 @@ export GPG_TTY=$(tty)
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mibui/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mibui/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mibui/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mibui/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 . "$HOME/.cargo/env"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -54,6 +34,11 @@ if [ -f '/Users/mibui/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mibui/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Start up 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 # iterm2 shell integration. SHOULD BE LOADED LAST!
 source ~/.iterm2_shell_integration.bash
