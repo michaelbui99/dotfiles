@@ -1,10 +1,12 @@
 ARCH=$(uname)
 
+export do="--dry-run=client -o yaml"
+export KUBECONFIG=./kubeconfig
+
 # Aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
-
 
 # git auto-complete
 if [ -f ~/.git-completion.bash ]; then
