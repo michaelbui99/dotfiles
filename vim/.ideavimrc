@@ -26,3 +26,4 @@ nnoremap gD :action GotoTypeDeclaration<CR>
 nnoremap <leader>fw :action FindInPath<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>ca :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>fm :action ReformatCode<CR>
