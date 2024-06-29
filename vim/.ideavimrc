@@ -20,7 +20,7 @@ set surround " commands: ys, cs, ds, S
 " Mappings
 "" align with nvim
 inoremap K :action QuickJavaDoc
-nnoremap gd :action GotoDeclaration
-nnoremap gD :action GotoTypeDeclaration
-nnoremap fw :action FindInPath
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
+nnoremap fw :action FindInPath<CR>
 nnoremap ff :action GotoFile<CR>
