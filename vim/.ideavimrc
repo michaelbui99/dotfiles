@@ -1,8 +1,26 @@
+
+" set <leader> to <space>
+let mapleader = " "
+
+" smart joining of e.g. strings
+set ideajoin
+
+" opts
 set number
 set relativenumber
-set ideajoin
 set smartcase
 set ignorecase
 set tabstop=4
 set softtabstop=4
 set expandtab
+
+" plugins
+set surround " commands: ys, cs, ds, S
+
+" Mappings
+"" align with nvim
+inoremap K :action QuickJavaDoc
+nnoremap gd :action GotoDeclaration
+nnoremap gD :action GotoTypeDeclaration
+nnoremap fw :action FindInPath
+nnoremap ff :action GotoFile<CR>
