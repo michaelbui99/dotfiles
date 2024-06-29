@@ -3,7 +3,7 @@
 WORKDIR="$(pwd)"
 
 function mac() {
-    FORMULAE=("bash" "cmake" "curl" "docker-compose" "git" "gradle" "openjdk@21" "helm" "yq" "jq" "nvm" "poetry" "terraform" "wget" "starship" "zoxide" "ripgrep" "nvim" "zellij")
+    FORMULAE=("bash" "cmake" "curl" "docker-compose" "git" "gradle" "openjdk@21" "helm" "yq" "jq" "nvm" "poetry" "terraform" "wget" "starship" "zoxide" "ripgrep" "nvim" "zellij" "jesseduffield/lazygit/lazygit")
     CASKS=("iterm2" "powershell")
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
@@ -38,6 +38,11 @@ function ubuntu(){
     curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh 
     ## NVM
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    ## Lazygit
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+    curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+    tar xf lazygit.tar.gz lazygit
+    sudo install lazygit /usr/local/bin
 
     # Setup ssh key
     SKIP_SSH_KEYGEN=false
