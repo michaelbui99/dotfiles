@@ -16,6 +16,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 winget install ajeetdsouza.zoxide
 
 
-choco install git powershell-core powertoys neovim 7zip vscode ripgrep starship -y
+choco install git powershell-core powertoys neovim 7zip vscode ripgrep starship lazygit -y
 
 & '.\symlink.ps1';
