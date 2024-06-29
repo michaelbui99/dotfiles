@@ -22,5 +22,5 @@ set surround " commands: ys, cs, ds, S
 inoremap K :action QuickJavaDoc
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gD :action GotoTypeDeclaration<CR>
-nnoremap fw :action FindInPath<CR>
-nnoremap ff :action GotoFile<CR>
+nnoremap <leader>fw :action FindInPath<CR>
+nnoremap <leader>ff :action GotoFile<CR>
