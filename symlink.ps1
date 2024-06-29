@@ -7,8 +7,6 @@ New-Item -ItemType SymbolicLink -Force -Path $PROFILE -Target $env:USERPROFILE\d
 New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.vimrc -Target $env:USERPROFILE\dotfiles\vim\.vimrc
 
 New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.ideavimrc -Target $env:USERPROFILE\dotfiles\vim\.ideavimrc
-
 New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.config/starship.toml -Target $env:USERPROFILE\dotfiles\starship\starship.toml
 
-New-Item -ItemType SymbolicLink -Force -Path $env:USERPROFILE/.config/starship.toml -Target $env:USERPROFILE\dotfiles\starship\starship.toml
-
+New-Item -ItemType SymbolicLink -Force -Path $env:LOCALAPPDATA/nvim -Target $env:USERPROFILE\dotfiles\vim\.config\nvim
