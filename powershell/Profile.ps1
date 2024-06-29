@@ -22,6 +22,7 @@ $env:FZF_DEFAULT_OPTS = '--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c
 Set-Alias vim nvim
 Set-Alias grep findstr
 Set-Alias ll ls
+Set-Alias lg lazygit
 
 # Functions
 function touch {

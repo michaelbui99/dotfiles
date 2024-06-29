@@ -16,6 +16,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 winget install ajeetdsouza.zoxide
 
 
-choco install git powershell-core powertoys neovim 7zip vscode ripgrep starship lazygit -y
+choco install git powershell-core powertoys neovim 7zip vscode ripgrep starship lazygit nodejs zig -y
 
 & '.\symlink.ps1';
+
+Write-Host "Remember to add tools to PATH (e.g. C:\ProgramData\chocolatey\lib\lazygit\tools and fzf)" 
