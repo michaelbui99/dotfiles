@@ -26,7 +26,7 @@ function mac() {
 function ubuntu(){
     sudo add-apt-repository ppa:neovim-ppa/unstable
 
-    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim terraform jq yq gradle"
+    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim terraform jq yq gradle nodejs build-essential"
 
     # Install tools
     sudo apt update 
