@@ -22,7 +22,7 @@ return {
    		ensure_installed = {
    			"lua-language-server", "stylua",
    			"html-lsp", "css-lsp" , "prettier",
-        "rust-analyzer", "typescript-language-server", "gopls"
+        "rust-analyzer", "tsserver", "yaml-language-server", "terraform-ls"
    		},
    	},
    },
@@ -33,8 +33,8 @@ return {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
         "html", "css", "typescript", "rust",
-        "javascript", "go"
-   		},
+        "javascript", "go", "yaml"
+   		}
    	},
    },
 }
