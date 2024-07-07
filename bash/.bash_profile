@@ -10,6 +10,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:"$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
 
 . "$HOME/.cargo/env"
