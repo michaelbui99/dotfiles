@@ -12,6 +12,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:"$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
 
 . "$HOME/.cargo/env"
