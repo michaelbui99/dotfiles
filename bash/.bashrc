@@ -12,6 +12,9 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+if [ -f /usr/share/bash-completion/completions/git ]; then
+  source /usr/share/bash-completion/completions/git
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

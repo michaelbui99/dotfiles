@@ -26,7 +26,7 @@ function mac() {
 function ubuntu(){
     sudo add-apt-repository ppa:neovim-ppa/unstable
 
-    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim terraform jq yq gradle nodejs build-essential unzip"
+    PACKAGES="git unzip net-tools openjdk-21-jdk openjdk-21-jre python3-pip neovim terraform jq yq gradle nodejs build-essential unzip ripgrep"
 
     # Install tools
     sudo apt update 
@@ -73,6 +73,17 @@ fi
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 ~/.fzf/install
 
+# Install krew for kubectl plugins
+(
+  set -x; cd "$(mktemp -d)" &&
+  OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
+  ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')" &&
+  KREW="krew-${OS}_${ARCH}" &&
+  curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" &&
+  tar zxvf "${KREW}.tar.g" &&
+  ./"${KREW}" install krew
+)
+ 
 # Update symbolic links
 echo "Updating symbolic links..."
 sh "${WORKDIR}/symlink.sh"
