@@ -31,3 +31,4 @@ nnoremap <leader>ca :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>fm :action ReformatCode<CR>
 nnoremap <leader>ra :action RenameElement<CR>
 nnoremap <leader>lf :action ShowErrorDescription<CR>
+nnoremap <C-x> :action ActivateTerminalToolWindow<CR>
