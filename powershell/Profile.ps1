@@ -26,7 +26,7 @@ Set-Alias lg lazygit
 Set-Alias k kubectl
 
 # Kubernetes
-$env:KUBECONFIG = ./kubeconfig
+$env:KUBECONFIG = "./kubeconfig"
 
 # Functions
 function touch {
