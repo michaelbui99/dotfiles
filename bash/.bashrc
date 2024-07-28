@@ -28,6 +28,7 @@ export GPG_TTY=$(tty)
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
 
 . "$HOME/.cargo/env"
 
