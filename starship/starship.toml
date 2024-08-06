@@ -24,3 +24,6 @@ style = "bold red"
 [kubernetes]
 format = '[$symbol\[$namespace\] $context](blue) '
 disabled = false
+
+[time]
+disabled = false
