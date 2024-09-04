@@ -2,10 +2,17 @@ ARCH=$(uname)
 
 export do="--dry-run=client -o yaml"
 export KUBECONFIG=./kubeconfig
+export DOTNET_ROOT=$HOME/Tools/dotnet8
+export EDITOR=/usr/bin/nvim
 
 # Aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
+fi
+
+# functions
+if [ -f ~/.bash_functions ]; then
+    source ~/.bash_functions
 fi
 
 # git auto-complete
