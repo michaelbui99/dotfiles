@@ -3,7 +3,12 @@ ARCH=$(uname)
 export do="--dry-run=client -o yaml"
 export KUBECONFIG=./kubeconfig
 export DOTNET_ROOT=$HOME/Tools/dotnet8
-export EDITOR=/usr/bin/nvim
+if [[ "$ARCH" = "Darwin" ]]; then
+  export EDITOR=/usr/local/bin/nvim
+else
+  export EDITOR=/usr/bin/nvim
+fi
+
 
 # Aliases
 if [ -f ~/.bash_aliases ]; then
@@ -23,11 +28,15 @@ if [ -f /usr/share/bash-completion/completions/git ]; then
   source /usr/share/bash-completion/completions/git
 fi
 
-# NVM
+# NVM 
 export NVM_DIR="$HOME/.nvm"
-  if [[ "$ARCH" = "Darwin" ]]; then 
+if [[ "$ARCH" = "Darwin" ]]; then 
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+ fi
+
+if [[ "$ARCH" = "Darwin" ]]; then 
+brew_etc="$(brew --prefix)/etc" && [[ -r "${brew_etc}/profile.d/bash_completion.sh" ]] && . "${brew_etc}/profile.d/bash_completion.sh"
   fi
 
 # GPG
