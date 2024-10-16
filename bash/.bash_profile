@@ -2,7 +2,6 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-
 # Environment
 PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
@@ -17,3 +16,4 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 
 . "$HOME/.cargo/env"
+source <(kubectl completion bash)
