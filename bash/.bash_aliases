@@ -8,3 +8,4 @@ alias ansible='docker run --rm -it -v $(pwd):/ansible/playbooks -v ~/.ssh:/root/
 alias ansible-playbook='docker run --rm -it -v $(pwd):/ansible/playbooks -v ~/.ssh:/root/.ssh  ansible'
 alias fix-chrome='rm ~/.config/google-chrome/*'
 alias ok-jump="xfreerdp /u:mttb_adm /d:HOKT_DOM /v:OKPRD17200.ok.dk /dynamic-resolution /cert:ignore /sec:tls -grab-keyboard"
+alias ssh='TERM=xterm-256color ssh'
