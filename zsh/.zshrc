@@ -145,3 +145,4 @@ if [[ "$ARCH" = "Darwin" ]]; then
 fi
 
 
+source <(kubectl completion zsh)
