@@ -1,4 +1,6 @@
 # If you come from bash you might have to change your $PATH.
+export ARCH="$(uname)"
+export PATH=$PATH:/opt/homebrew/opt/dotnet
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
@@ -109,6 +111,10 @@ else
   export EDITOR=/usr/bin/nvim
 fi
 
+if [[ "$ARCH" = "Darwin" ]]; then 
+    export DOTNET_ROOT=/opt/homebrew/opt/dotnet
+fi
+
 # Aliases
 alias ll="ls -alFh"
 alias k="kubectl"
@@ -131,6 +137,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # GPG
 export GPG_TTY=$(tty)
+
 
 # Start up 
 if [[ "$ARCH" = "Darwin" ]]; then 
