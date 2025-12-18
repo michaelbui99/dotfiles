@@ -12,6 +12,9 @@ set -gx PATH $PATH (go env GOPATH)/bin
 set -gx PATH (set -q KREW_ROOT; and echo $KREW_ROOT; or echo $HOME/.krew)/bin $PATH
 set -gx PATH $PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
+# Cluster by folder k8s setup
+set -gx KUBECONFIG ./kubeconfig
+
 # Aliases
 alias ll="ls -alFh"
 alias k="kubectl"
