@@ -13,4 +13,5 @@ ln -fs ~/dotfiles/bash/.bashrc ~/.bashrc && \
     ln -fs ~/dotfiles/vim/.config/nvim ~/.config/nvim && \
     ln -fs ~/dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl && \
     ln -fs ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf && \
+    ln -fs ~/dotfiles/fish/config.fish ~/.config/fish/config.fish && \
     ln -fs ~/dotfiles/zsh/.zshrc ~/.zshrc
